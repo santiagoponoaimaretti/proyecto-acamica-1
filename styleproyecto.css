@@ -1,0 +1,510 @@
+
+* {
+    margin: 0;
+    
+    border: 0;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+/* header y menu hamburguesa*/
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    
+    
+}
+.logo{
+    width: 36px;
+    height: 36px;
+    margin-left: 6.9%;
+}
+header nav .menuh ul{
+    width: 100%;
+    position: absolute;
+    top: 52px;
+    right: 0;
+    overflow: hidden;
+    list-style: none;
+    height: 0px;
+    background: #0000A3;
+}
+
+header nav .menuh  ul li {
+    position: relative;
+} 
+
+header nav .menuh ul li a {
+    position: relative;
+    font-family: 'IBMPlexMono', monospace;
+    font-size: 16px;
+    color: black;
+    padding: 14px 6%;
+    line-height: 28px;
+    display: block;
+    text-decoration: none;
+}
+ 
+header nav .menuh input[type="checkbox"]:checked ~ ul {
+    height: 240px;
+}
+header nav .menuh {
+    padding-top: 3px;
+}
+header nav .menuh input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    opacity: 0;
+    z-index: 2;
+    position: absolute;
+}
+header nav .menuh span {
+    display: block;
+    width: 25px;
+    height: 2.5px;
+    margin-bottom: 6.5px;
+    position: relative;
+    background: #000;
+    z-index: 1;
+    transform-origin: 3px 0px;
+}
+header nav .menuh span:first-child {
+    transform-origin: 0% 0%;
+}
+header nav .menuh span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+}
+
+header nav .menuh input:checked ~ span {
+    opacity: 1;
+    transform: rotate(45deg) translate(2px, 1px);
+}
+header nav .menuh input:checked ~ span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+}
+header nav .menuh input:checked ~ span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(1px, 0px);
+}
+@media screen and (max-width: 1000px){
+    header nav .menuh ul li a{
+        color: white;
+    }
+}
+@media screen and (min-width: 1000px){
+    header nav .menuh ul {
+        position: relative;
+        top: 0;
+        right: 0;
+        overflow: hidden;
+        background: unset;
+        height: unset;
+        
+    }
+    header nav .menuh  ul li {
+        padding: 5px 10px;
+        display: inline-block;
+        
+    } 
+    header nav .menuh  ul li:hover {
+        background: unset;
+        color: #00F3BB;
+        text-decoration-line: line-through ;
+    } 
+    header nav .menuh  ul li:hover :active{
+        background: unset;
+        color: grey;
+        text-decoration-line: line-through;
+    }
+    header nav .menuh ul li a {
+        padding: unset;
+        line-height: unset;
+    }
+    header nav .menuh  ul li a:hover {
+        color: unset;
+    } 
+    header nav .menuh input {
+        display: none;
+    }
+    header nav .menuh span {
+        display: none;
+    }
+}
+/* texto primer titulo */
+.hello-titulo h1{
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 64px;
+    padding-left: 13.9%;
+    font-weight: 500;
+}
+body p2{
+    text-decoration-line: line-through;
+}
+body p4{
+    color: #0000EC;
+    border-radius: 3px;
+}
+.hello-titulo h2{
+    font-family: 'IBMPlexMono', monospace; 
+    font-size: 16px;
+    line-height: 24px;
+    width: 43.6%;
+    padding-left: 13.9%;
+    font-weight: lighter;
+}
+/* boton "conoce mas"*/
+.button {
+    background-color: #00F3BB;
+    border: none;
+    color: black;
+    padding:32px 118px ;
+    text-align: center;
+    font-size: 24px;
+    cursor: pointer;
+    font-family:'IBMPlexMono', monospace, medium ;
+    line-height: 24px;
+    margin-left: 13.9%;
+    margin-top: 56px;
+    margin-bottom: 60px;
+  }
+  
+  .button:hover {
+    background: linear-gradient(to right,#00F3BB,#0000EC 100%);
+    
+  }
+  button:hover{
+      color: white;
+  }
+
+  /* color con angulo de fondo */
+  .episodios {
+      position: relative;
+      height: 1050px;
+      
+  
+  }
+  .episodios .epback{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(225deg,#0000FF,#0000A3); 
+    transform: skewY(-6deg);
+    transform-origin: top left;
+  }
+  .episodios .episodios-contenido{
+      transform:  skewY(0deg);
+      
+  }
+  .episodios .episodios-titulo{
+      transform: skewY(0deg);
+  }
+  
+ 
+  h3{
+    margin-left: 13.9%;
+    margin-top: 4.8%;
+    margin-bottom: 0.7%;
+    color: white;
+    font-family: "IBMPlexSans",sans-serif;
+    font-weight: lighter;
+    font-size: 48px;
+  }
+  iframe{
+      margin-left: 100px;
+      margin-right: 62px;
+      margin-bottom: 1.8%;
+  }
+@media screen and (max-width:800px){
+     .episodios-contenido iframe{
+        margin-left: 3.4%;
+        margin-right: 3.4%;
+        margin-bottom: 0.2%;
+        width: 80%;
+    }
+    .episodios{
+        margin-bottom: 1%;
+    }
+}
+
+  /* de donde venimos*/
+  @media screen and (min-width: 1525px){
+    .De-donde-venimos img{
+        transform: translateY(-350px);
+       
+        margin:20px;
+        
+  }
+  
+  
+  .De-donde-venimos-titulo h1{
+    
+    padding-left: 50%;
+    
+    transform: translateY(-1100px);
+  }
+  .De-donde-venimos p{
+     
+      padding-left: 50%;
+      padding-top: 0.6%;
+      
+      padding-right: 17.8%;
+      transform: translateY(-1100px);
+  }
+}
+@media screen and (max-width: 1500px){
+.De-donde-venimos-titulo h1{
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 0.1%;
+}
+.De-donde-venimos p{
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 1%;
+}
+.De-donde-venimos img{
+    
+    margin: 0px;
+    max-width: 80%;
+}
+}
+.De-donde-venimos-titulo h1{
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 48px;
+    font-weight: 400;
+    
+}
+.De-donde-venimos p{
+    font-family:'IBMPlexMono', monospace ;
+    font-weight: lighter;
+    font-size: 16px;
+}
+
+  /* invitads*/
+  @media screen and (min-width: 1500px){
+  .invitad{
+      transform: translateY(-500px);
+  }
+  
+  
+  .invitad h1{
+    
+    padding-left: 13.9%;
+    font-weight: 400;
+    padding-bottom: 0.9%;
+  }
+  .invitad img{
+      padding-left: 0px;
+      padding-top: 0px;
+      padding-right: 0px;
+      padding-bottom: 0px;
+      margin: 0px;
+      width: 33%;
+      height: 364px;
+  }
+}
+@media screen and (max-width: 1500px) and (min-width:1000px){
+    .invitad h1{
+        padding-left: 13.9%;
+    font-weight: 400;
+    padding-bottom: 0.9%;
+    }
+    .invitad img{
+        padding-left: 0px;
+      padding-top: 0px;
+      padding-right: 0px;
+      padding-bottom: 0px;
+      margin: 0px;
+      width: 49%;
+      height: 364px;
+    }
+}
+@media screen and (max-width:1000px) {
+    .invitad h1{
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-bottom: 0.3%;
+    }
+    .invitad img{
+        padding-left: 0px;
+      padding-top: 0px;
+      padding-right: 0px;
+      padding-bottom: 0px;
+      margin: 0px;
+      width: 100%;
+      height: 364px;
+    }
+}
+.invitad h1{
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 48px;
+  }
+  /*temas*/
+  @media screen and (min-width:1500px){
+      .temas h1{
+          transform: translateY(-430px);
+          padding-top: 1.6%;
+          padding-left: 13.9%;
+          padding-bottom: 1.4%;
+      }
+      .temas-all{
+          transform: translateY(-430px);
+          display: flex;
+        
+      }
+      
+  }
+  .temas-all{
+      flex-direction: row;
+      padding-left: 15%;
+      padding-right: 15%;
+
+      
+  }
+  .temas-all img{
+      flex-wrap: wrap;
+
+  }
+  .temas-all  a{
+    text-decoration: none;
+    color: black;
+    font-family:'IBM Plex Sans', sans-serif ;
+    font-weight: bold;
+    
+     
+  }
+  .temas-all a p{
+      width: 18.33rem;
+      height: 5.33rem;
+      text-align: center;
+      font-size: 2rem;
+      display: table-row;
+  }
+  .temas h1{
+      font-family: 'IBM Plex Sans', sans-serif;
+      font-size: 4rem;
+      font-weight: lighter;
+  }
+  /*novedades*/
+  .novedades{
+     padding-top: 10%;
+    position: relative;
+    background-image: linear-gradient(225deg,#0000FF,#0000A3); 
+    height: 28%;
+    
+    clip-path: polygon( 0 6vw,
+    100% 0,
+    100% 100%,
+    0 100%)
+  }
+ 
+  
+  @media screen and (min-width:1000px){
+    .novedades-titulo h1{
+        padding-left: 26%;
+        
+    }
+    .novedades{
+        height: 518px;
+    }
+    .novedades .button{
+        margin-left: 38% ;
+    }
+  }
+  @media screen and (max-width:1000px){
+      .novedades-titulo h1{
+          padding-left: 5%;
+          padding-right: 5%;
+          text-align: center;
+      }
+      .novedades{
+          height: 400px;
+      }
+      .novedades.button{
+          margin-left: 3%;
+          align-items: center;
+      }
+  }
+  .novedades-titulo h1{
+    font-family:'IBM Plex Sans', sans-serif ;
+    font-size: 4rem;
+    color: white;
+    
+  }
+  .novedades .button{
+    background-color: #00F3BB;
+    border: none;
+    color: black;
+    
+    text-align: center;
+    font-size: 24px;
+    cursor: pointer;
+    font-family:'IBMPlexMono', monospace, medium ;
+    line-height: 24px;
+    
+    margin-top: 56px;
+  }
+  .novedades .button:hover{
+      color: white;
+  }
+/* footer*/
+
+footer{
+    color: black;
+    padding-top: 5px;
+    background-color: white;
+    margin-top: 0.9%;
+    margin-bottom: 0.8%;
+}
+.copyright{
+    font-family: 'IBMPlexMono', monospace;
+    font-weight: lighter;
+    font-size: 14px;
+    margin-left: 6.9%;
+}
+@media screen and (max-width:1000px){
+    .container-redes{
+        flex-wrap: wrap;
+    }
+    .copyright{
+        margin-left: 14.7%;
+        margin-bottom: 3%;
+    }
+    .redes{
+        margin-left: 14.1%;
+    }
+}
+.row img{
+    width: auto;
+    height: 25px;
+    margin-left: 2.5%;
+    
+}
+  .container-redes{
+    flex-direction: row;
+    display: flex;
+     justify-content: space-between;
+     
+  }
+  .redes{
+    flex-direction: row;
+    display: flex;
+    align-items: flex-end, row;
+    margin-right: 6.9%;
+  }
+
+
+  
+
+
+
+  
