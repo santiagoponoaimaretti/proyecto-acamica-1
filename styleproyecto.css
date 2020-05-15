@@ -419,7 +419,8 @@ body p4{
         height: 518px;
     }
     .novedades .button{
-        margin-left: 38% ;
+        margin-left: 38%;
+        
     }
   }
   @media screen and (max-width:1000px){
@@ -429,10 +430,11 @@ body p4{
           text-align: center;
       }
       .novedades{
-          height: 400px;
+          height: 500px;
       }
-      .novedades.button{
+      .novedades .button{
           margin-left: 3%;
+          margin-right: 3%;
           align-items: center;
       }
   }
