@@ -365,14 +365,16 @@ body p4{
   }
   .temas-all{
       flex-direction: row;
-      padding-left: 15%;
-      padding-right: 15%;
-
+      margin-left: 15%;
+      margin-right: 15%;
+    
       
   }
-  .temas-all img{
+  .temas .temas-all img{
       flex-wrap: wrap;
-
+      align-items: center;
+      padding-left: 100px;
+    
   }
   .temas-all  a{
     text-decoration: none;
